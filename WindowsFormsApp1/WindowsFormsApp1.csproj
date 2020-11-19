@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C7F6E60-1298-4E9D-B4CD-073DAFA6B75B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing.ce2.0, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\ZXing.Net.0.16.6\lib\net20-cf\zxing.ce2.0.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="function\pwdFun\modifyPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="function\pwdFun\modifyPwd.Designer.cs">
+      <DependentUpon>modifyPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="function\Singlelist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="function\Singlelist.Designer.cs">
+      <DependentUpon>Singlelist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainview\Canteen_System_management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainview\Canteen_System_management.Designer.cs">
+      <DependentUpon>Canteen_System_management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainview\Editdata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainview\Editdata.Designer.cs">
+      <DependentUpon>Editdata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainview\register\AdminRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainview\register\AdminRegister.Designer.cs">
+      <DependentUpon>AdminRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainview\scanCode\scanQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainview\scanCode\scanQRCode.designer.cs">
+      <DependentUpon>scanQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainview\tableView\ListCreate.cs" />
+    <Compile Include="mainview\treeNodeView\RootNodesEdit.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sqlOperating\DbSQLHelper.cs" />
+    <Compile Include="sqlOperating\SqlHelper.cs" />
+    <Compile Include="tools\DataChange.cs" />
+    <Compile Include="tools\EncodHelper.cs" />
+    <Compile Include="tools\GetAdress.cs" />
+    <Compile Include="tools\MesShow.cs" />
+    <Compile Include="tools\NoEmpty.cs" />
+    <Compile Include="tools\UserSession.cs" />
+    <Compile Include="tools\Verification.cs" />
+    <Compile Include="mainview\loginview\UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainview\loginview\UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="function\pwdFun\modifyPwd.resx">
+      <DependentUpon>modifyPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="function\Singlelist.resx">
+      <DependentUpon>Singlelist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainview\Canteen_System_management.resx">
+      <DependentUpon>Canteen_System_management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainview\Editdata.resx">
+      <DependentUpon>Editdata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainview\register\AdminRegister.resx">
+      <DependentUpon>AdminRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainview\scanCode\scanQRCode.resx">
+      <DependentUpon>scanQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="mainview\loginview\UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="packages\AForge.2.2.5\.signature.p7s" />
+    <None Include="packages\AForge.2.2.5\AForge.2.2.5.nupkg" />
+    <None Include="packages\AForge.Controls.2.2.5\.signature.p7s" />
+    <None Include="packages\AForge.Controls.2.2.5\AForge.Controls.2.2.5.nupkg" />
+    <None Include="packages\AForge.Imaging.2.2.5\.signature.p7s" />
+    <None Include="packages\AForge.Imaging.2.2.5\AForge.Imaging.2.2.5.nupkg" />
+    <None Include="packages\AForge.Math.2.2.5\.signature.p7s" />
+    <None Include="packages\AForge.Math.2.2.5\AForge.Math.2.2.5.nupkg" />
+    <None Include="packages\AForge.Video.2.2.5\.signature.p7s" />
+    <None Include="packages\AForge.Video.2.2.5\AForge.Video.2.2.5.nupkg" />
+    <None Include="packages\AForge.Video.DirectShow.2.2.5\.signature.p7s" />
+    <None Include="packages\AForge.Video.DirectShow.2.2.5\AForge.Video.DirectShow.2.2.5.nupkg" />
+    <None Include="packages\ThoughtWorks.QRCode.1.1.0\.signature.p7s" />
+    <None Include="packages\ThoughtWorks.QRCode.1.1.0\ThoughtWorks.QRCode.1.1.0.nupkg" />
+    <None Include="packages\ZXing.Net.0.16.6\.signature.p7s" />
+    <None Include="packages\ZXing.Net.0.16.6\lib\native\zxing.pri" />
+    <None Include="packages\ZXing.Net.0.16.6\lib\native\zxing.winmd" />
+    <None Include="packages\ZXing.Net.0.16.6\lib\uap10\zxing.pri" />
+    <None Include="packages\ZXing.Net.0.16.6\lib\windows8\zxing.pri" />
+    <None Include="packages\ZXing.Net.0.16.6\lib\windows8\zxing.winmd" />
+    <None Include="packages\ZXing.Net.0.16.6\ZXing.Net.0.16.6.nupkg" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pop_upbox\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages\AForge.2.2.5\lib\AForge.dll" />
+    <Content Include="packages\AForge.2.2.5\lib\AForge.xml" />
+    <Content Include="packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll" />
+    <Content Include="packages\AForge.Controls.2.2.5\lib\AForge.Controls.xml" />
+    <Content Include="packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll" />
+    <Content Include="packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.xml" />
+    <Content Include="packages\AForge.Math.2.2.5\lib\AForge.Math.dll" />
+    <Content Include="packages\AForge.Math.2.2.5\lib\AForge.Math.xml" />
+    <Content Include="packages\AForge.Video.2.2.5\lib\AForge.Video.dll" />
+    <Content Include="packages\AForge.Video.2.2.5\lib\AForge.Video.xml" />
+    <Content Include="packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll" />
+    <Content Include="packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.xml" />
+    <Content Include="packages\ThoughtWorks.QRCode.1.1.0\lib\ThoughtWorks.QRCode.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\native\zxing.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net20-cf\zxing.ce2.0.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net20-cf\zxing.ce2.0.xml" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net20\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net20\zxing.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net35-cf\zxing.ce3.5.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net35-cf\zxing.ce3.5.xml" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net35\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net35\zxing.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net40\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net40\zxing.presentation.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net40\zxing.presentation.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net40\zxing.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net45\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net45\zxing.presentation.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net45\zxing.presentation.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net45\zxing.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net461\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net461\zxing.presentation.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net461\zxing.presentation.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net461\zxing.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net47\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net47\zxing.presentation.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net47\zxing.presentation.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net47\zxing.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net48\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net48\zxing.presentation.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net48\zxing.presentation.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\net48\zxing.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netcoreapp3.0\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netcoreapp3.0\zxing.xml" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netcoreapp3.1\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netcoreapp3.1\zxing.xml" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netstandard1.0\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netstandard1.0\zxing.xml" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netstandard1.1\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netstandard1.1\zxing.xml" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netstandard1.3\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netstandard1.3\zxing.xml" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netstandard2.0\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netstandard2.0\zxing.xml" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netstandard2.1\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\netstandard2.1\zxing.xml" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\portable-win+net40+sl4+sl5+wp7+wp71+wp8\zxing.portable.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\portable-win+net40+sl4+sl5+wp7+wp71+wp8\zxing.portable.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\sl3-wp\zxing.wp7.0.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\sl3-wp\zxing.wp7.0.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\sl4-wp71\zxing.wp7.1.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\sl4-wp71\zxing.wp7.1.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\sl4\zxing.sl4.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\sl4\zxing.sl4.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\sl5\zxing.sl5.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\sl5\zxing.sl5.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\uap10\zxing.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\uap10\zxing.xml" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\windows8-managed\zxing.winrt.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\windows8-managed\zxing.winrt.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\windows8\zxing.XML" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\wp8\zxing.wp8.0.dll" />
+    <Content Include="packages\ZXing.Net.0.16.6\lib\wp8\zxing.wp8.0.XML" />
+    <Content Include="resources\dishes\dbc.png" />
+    <Content Include="resources\dishes\什锦玉米粒.jpg" />
+    <Content Include="resources\dishes\农家小炒肉.jpg" />
+    <Content Include="resources\dishes\卤鹅肉.jpg" />
+    <Content Include="resources\dishes\土豆炖鸡肉.jpg" />
+    <Content Include="resources\dishes\大鸡排.jpg" />
+    <Content Include="resources\dishes\娃娃菜.png" />
+    <Content Include="resources\dishes\家常红烧肉.jpg" />
+    <Content Include="resources\dishes\干煸四季豆.jpg" />
+    <Content Include="resources\dishes\干煸菜花.jpg" />
+    <Content Include="resources\dishes\梅菜扣肉.jpg" />
+    <Content Include="resources\dishes\清炒西兰花.jpg" />
+    <Content Include="resources\dishes\炒娃娃菜.jpg" />
+    <Content Include="resources\dishes\焖鸭.jpg" />
+    <Content Include="resources\dishes\爆炒黄瓜.jpg" />
+    <Content Include="resources\dishes\猪肉.png" />
+    <Content Include="resources\dishes\红烧狮子头.jpg" />
+    <Content Include="resources\dishes\红烧茄子.jpg" />
+    <Content Include="resources\dishes\红烧鸡翅.jpg" />
+    <Content Include="resources\dishes\红烧鸡腿.jpg" />
+    <Content Include="resources\dishes\肉沫豆腐.jpg" />
+    <Content Include="resources\dishes\胡萝卜.png" />
+    <Content Include="resources\dishes\芋头.png" />
+    <Content Include="resources\dishes\芥兰.png" />
+    <Content Include="resources\dishes\花菜.png" />
+    <Content Include="resources\dishes\花菜炒肉.jpg" />
+    <Content Include="resources\dishes\芹菜.png" />
+    <Content Include="resources\dishes\芹菜炒肉.jpg" />
+    <Content Include="resources\dishes\葱焖豆腐.jpg" />
+    <Content Include="resources\dishes\葱花鸡蛋饼.jpg" />
+    <Content Include="resources\dishes\葱香鸡腿.jpg" />
+    <Content Include="resources\dishes\西兰花.png" />
+    <Content Include="resources\dishes\辣炒菜花.jpg" />
+    <Content Include="resources\dishes\酱鸭.jpg" />
+    <Content Include="resources\dishes\酸辣土豆丝.jpg" />
+    <Content Include="resources\dishes\马铃薯.png" />
+    <Content Include="resources\dishes\鸡肉.png" />
+    <Content Include="resources\dishes\鸭肉.png" />
+    <Content Include="resources\dishes\鹅肉.png" />
+    <Content Include="resources\dishes\黄焖鸡.jpg" />
+    <Content Include="resources\dishes\黄瓜炒火腿.jpg" />
+    <Content Include="resources\image\bg3.jpg" />
+    <Content Include="resources\image\t01eae069596685b82f.webp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
