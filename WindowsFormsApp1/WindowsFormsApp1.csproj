@@ -107,6 +107,11 @@
     <Compile Include="mainview\treeNodeView\RootNodesEdit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="sqlOperating\DbSQLHelper.cs" />
     <Compile Include="sqlOperating\SqlHelper.cs" />
     <Compile Include="tools\DataChange.cs" />
@@ -142,14 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="mainview\loginview\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +307,7 @@
     <Content Include="resources\dishes\黄焖鸡.jpg" />
     <Content Include="resources\dishes\黄瓜炒火腿.jpg" />
     <Content Include="resources\image\bg3.jpg" />
+    <Content Include="resources\image\login.PNG" />
     <Content Include="resources\image\t01eae069596685b82f.webp.jpg" />
   </ItemGroup>
   <ItemGroup>

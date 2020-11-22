@@ -83,14 +83,14 @@ namespace WindowsFormsApp1
 
         private void login_MouseMove(object sender, MouseEventArgs e)
         {
-            login.BackColor = Color.SkyBlue;
-            login.ForeColor = Color.White;
+            //login.BackColor = Color.SkyBlue;
+            //login.ForeColor = Color.White;
         }
 
         private void login_MouseLeave(object sender, EventArgs e)
         {
-            login.BackColor = Color.White;
-            login.ForeColor = Color.Black;
+            //login.BackColor = Color.White;
+            //login.ForeColor = Color.Black;
         }
 
         private void openScan_Click(object sender, EventArgs e)
@@ -99,6 +99,11 @@ namespace WindowsFormsApp1
             //Thread th = new Thread(delegate () { scan.ShowDialog(); });
             //th.Start();
             scan.ShowDialog();
+        }
+
+        private void UserLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
