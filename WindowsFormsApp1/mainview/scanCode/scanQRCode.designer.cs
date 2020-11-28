@@ -113,12 +113,14 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(368, 104);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(154, 76);
             this.button2.TabIndex = 3;
-            this.button2.Text = "点击扫码";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Text = "click to scan";
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // videoSourcePlayer1
@@ -134,14 +136,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 450);
+            this.ClientSize = new System.Drawing.Size(632, 312);
             this.Controls.Add(this.videoSourcePlayer1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "scanQRCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "笔记本";
+            this.Text = "扫码登录";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

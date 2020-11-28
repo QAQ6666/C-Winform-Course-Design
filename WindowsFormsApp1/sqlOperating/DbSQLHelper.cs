@@ -75,12 +75,17 @@ namespace WindowsFormsApp1.sqlOperating
                         //读取指定用户名对应的用户编号和密码
                         pwd = "" + dr[2];
                     }
+                    string str3 = ""+dr[3];
                     dr.Close();
                     pwd = EncodHelper.DESDeCode(pwd, "78945612");
                     conn.Close();
                     if (pwd.Equals(pwdin))
                     {
-                        return 1;
+                        if (str3.Equals("y"))
+                        {
+                            return 11;
+                        }
+                        return 10;
                     }
                     else
                     {

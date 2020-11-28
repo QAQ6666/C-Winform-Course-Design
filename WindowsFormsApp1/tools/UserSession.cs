@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.tools
 {
-    class UserSession
+    public class UserSession
     {
         public UserSession()
         {}

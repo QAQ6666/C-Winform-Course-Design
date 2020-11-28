@@ -66,7 +66,7 @@
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(87, 34);
             this.updateBtn.TabIndex = 1;
-            this.updateBtn.Text = "更新";
+            this.updateBtn.Text = "update";
             this.updateBtn.UseVisualStyleBackColor = false;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
@@ -79,7 +79,7 @@
             this.addsBtn.Name = "addsBtn";
             this.addsBtn.Size = new System.Drawing.Size(87, 34);
             this.addsBtn.TabIndex = 2;
-            this.addsBtn.Text = "新增";
+            this.addsBtn.Text = "add";
             this.addsBtn.UseVisualStyleBackColor = false;
             this.addsBtn.Click += new System.EventHandler(this.addsBtn_Click);
             // 
@@ -90,9 +90,9 @@
             this.confirmAdd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.confirmAdd.Location = new System.Drawing.Point(1085, 165);
             this.confirmAdd.Name = "confirmAdd";
-            this.confirmAdd.Size = new System.Drawing.Size(87, 34);
+            this.confirmAdd.Size = new System.Drawing.Size(87, 55);
             this.confirmAdd.TabIndex = 3;
-            this.confirmAdd.Text = "确认添加";
+            this.confirmAdd.Text = "add to  forever";
             this.confirmAdd.UseVisualStyleBackColor = false;
             this.confirmAdd.Click += new System.EventHandler(this.confirmAdd_Click);
             // 
@@ -101,11 +101,11 @@
             this.delectBtn.BackColor = System.Drawing.Color.White;
             this.delectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.delectBtn.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.delectBtn.Location = new System.Drawing.Point(1085, 218);
+            this.delectBtn.Location = new System.Drawing.Point(1085, 238);
             this.delectBtn.Name = "delectBtn";
             this.delectBtn.Size = new System.Drawing.Size(87, 34);
             this.delectBtn.TabIndex = 4;
-            this.delectBtn.Text = "删除";
+            this.delectBtn.Text = "delete";
             this.delectBtn.UseVisualStyleBackColor = false;
             this.delectBtn.Click += new System.EventHandler(this.delectBtn_Click);
             // 
@@ -114,11 +114,11 @@
             this.detailsBtn.BackColor = System.Drawing.Color.White;
             this.detailsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.detailsBtn.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.detailsBtn.Location = new System.Drawing.Point(1085, 278);
+            this.detailsBtn.Location = new System.Drawing.Point(1085, 287);
             this.detailsBtn.Name = "detailsBtn";
-            this.detailsBtn.Size = new System.Drawing.Size(87, 34);
+            this.detailsBtn.Size = new System.Drawing.Size(87, 70);
             this.detailsBtn.TabIndex = 5;
-            this.detailsBtn.Text = "查看详细";
+            this.detailsBtn.Text = "detailed information";
             this.detailsBtn.UseVisualStyleBackColor = false;
             this.detailsBtn.Visible = false;
             this.detailsBtn.Click += new System.EventHandler(this.detailsBtn_Click);

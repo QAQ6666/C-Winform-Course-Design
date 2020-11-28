@@ -15,6 +15,8 @@ namespace WindowsFormsApp1
 {
     public partial class SystemManagementView : Form
     {
+        private UserSession userSession1;
+        private bool quanxian = true;
         public SystemManagementView()
         {
             InitializeComponent();
@@ -22,11 +24,30 @@ namespace WindowsFormsApp1
             rootNodesEdit = new RootNodesEdit();
             IsMdiContainer = true;
         }
+        public SystemManagementView(UserSession userSession)
+        {
+            InitializeComponent();
+            adresslab.Text = GetAdress.GetLocalIP();
+            rootNodesEdit = new RootNodesEdit();
+            IsMdiContainer = true;
+            userSession1 = userSession;
+        }
 
         public static Thread thEdit;
         public static Thread thsinglist;
         private void Form1_Load(object sender, EventArgs e)
         {
+            Console.WriteLine(UserSession.getRoot());
+            if(UserSession.getRoot() == "ROOT")
+            {
+                quanxian = true;
+                this.authorityBtn.Visible = true;
+            }
+            else
+            {
+                quanxian = false;
+                this.authorityBtn.Visible = false;
+            }
         }
       
         //帮助按钮

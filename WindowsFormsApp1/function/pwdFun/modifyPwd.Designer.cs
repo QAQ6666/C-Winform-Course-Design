@@ -71,58 +71,61 @@ namespace WindowsFormsApp1.function.pwdFun
             // jpwd
             // 
             this.jpwd.AutoSize = true;
-            this.jpwd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.jpwd.Location = new System.Drawing.Point(137, 54);
+            this.jpwd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.jpwd.Location = new System.Drawing.Point(115, 57);
             this.jpwd.Name = "jpwd";
-            this.jpwd.Size = new System.Drawing.Size(96, 27);
+            this.jpwd.Size = new System.Drawing.Size(116, 19);
             this.jpwd.TabIndex = 2;
-            this.jpwd.Text = "旧 密 码 :";
+            this.jpwd.Text = "old passwork :";
             // 
             // newPwd
             // 
             this.newPwd.AutoSize = true;
-            this.newPwd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.newPwd.Location = new System.Drawing.Point(137, 114);
+            this.newPwd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.newPwd.Location = new System.Drawing.Point(108, 117);
             this.newPwd.Name = "newPwd";
-            this.newPwd.Size = new System.Drawing.Size(96, 27);
+            this.newPwd.Size = new System.Drawing.Size(125, 19);
             this.newPwd.TabIndex = 3;
-            this.newPwd.Text = "新 密 码 :";
+            this.newPwd.Text = "new password :";
             // 
             // textBox1
             // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(248, 48);
+            this.textBox1.Location = new System.Drawing.Point(248, 51);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(196, 38);
+            this.textBox1.Size = new System.Drawing.Size(196, 31);
             this.textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(248, 109);
+            this.textBox2.Location = new System.Drawing.Point(248, 112);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(196, 38);
+            this.textBox2.Size = new System.Drawing.Size(196, 31);
             this.textBox2.TabIndex = 5;
             // 
             // confirmPwd
             // 
             this.confirmPwd.AutoSize = true;
-            this.confirmPwd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.confirmPwd.Location = new System.Drawing.Point(111, 172);
+            this.confirmPwd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.confirmPwd.Location = new System.Drawing.Point(135, 176);
             this.confirmPwd.Name = "confirmPwd";
-            this.confirmPwd.Size = new System.Drawing.Size(122, 27);
+            this.confirmPwd.Size = new System.Drawing.Size(96, 19);
             this.confirmPwd.TabIndex = 6;
-            this.confirmPwd.Text = "确 认 密 码 :";
+            this.confirmPwd.Text = "again pwd :";
             // 
             // textBox3
             // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox3.Location = new System.Drawing.Point(248, 169);
+            this.textBox3.Location = new System.Drawing.Point(248, 171);
             this.textBox3.Name = "textBox3";
             this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(196, 38);
+            this.textBox3.Size = new System.Drawing.Size(196, 31);
             this.textBox3.TabIndex = 7;
             // 
             // modifyPwd

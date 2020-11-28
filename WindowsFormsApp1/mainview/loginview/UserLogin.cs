@@ -53,9 +53,10 @@ namespace WindowsFormsApp1
                 else
                 {
                     int rows = DbSQLHelper.rowQuery(userin, pwdin);
-                    if (rows == 1)
+                    if (rows == 11 || rows == 10)
                     {
-                        UserSession.setAll(userin,"ROOT", DateTime.Now.ToString());
+                        string str = rows == 11 ? "ROOT" : "N";
+                        UserSession.setAll(userin, str, DateTime.Now.ToString());
                         MesShow.ms("登录成功");
                         this.Close();
                         /* 方式二: */
