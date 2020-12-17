@@ -218,8 +218,8 @@ namespace WindowsFormsApp1.mainview.tableView
                             ListViewItem item = new ListViewItem();
                             item.SubItems[0].Text = dr["aid"].ToString();
                             item.SubItems.Add(dr["admin"].ToString());
-                            item.SubItems.Add("不可见");
-                            //item.SubItems.Add(dr["pwd"].ToString());
+                            //item.SubItems.Add("不可见");
+                            item.SubItems.Add(dr["pwd"].ToString());
                             item.SubItems.Add(dr["isroot"].ToString());
                             //item.SubItems.Add(dr["isroot"].ToString().Equals("y") ? "是" : "否");
                             l.Items.Add(item);

@@ -37,7 +37,6 @@ namespace WindowsFormsApp1
         public static Thread thsinglist;
         private void Form1_Load(object sender, EventArgs e)
         {
-            Console.WriteLine(UserSession.getRoot());
             if(UserSession.getRoot() == "ROOT")
             {
                 quanxian = true;
@@ -75,6 +74,7 @@ namespace WindowsFormsApp1
                 //退出登录代码:
                 try
                 {
+
                 }
                 catch (NullReferenceException)
                 {
@@ -252,7 +252,7 @@ namespace WindowsFormsApp1
         private string imgpath = "";
         private void listView_MouseClick(object sender, MouseEventArgs e)
         {
-            
+            imgpath = "";
             if (isImgshow)
             {
                 ListView lv = (ListView)sender;

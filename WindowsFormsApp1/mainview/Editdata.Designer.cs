@@ -116,9 +116,9 @@
             this.detailsBtn.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.detailsBtn.Location = new System.Drawing.Point(1085, 287);
             this.detailsBtn.Name = "detailsBtn";
-            this.detailsBtn.Size = new System.Drawing.Size(87, 70);
+            this.detailsBtn.Size = new System.Drawing.Size(87, 42);
             this.detailsBtn.TabIndex = 5;
-            this.detailsBtn.Text = "detailed information";
+            this.detailsBtn.Text = "详细信息";
             this.detailsBtn.UseVisualStyleBackColor = false;
             this.detailsBtn.Visible = false;
             this.detailsBtn.Click += new System.EventHandler(this.detailsBtn_Click);

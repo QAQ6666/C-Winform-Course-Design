@@ -1,5 +1,7 @@
 ﻿using System.Windows.Forms;
 using System.Drawing;
+using System.Threading;
+
 namespace WindowsFormsApp1.function.pwdFun
 {
     partial class modifyPwd
@@ -66,6 +68,7 @@ namespace WindowsFormsApp1.function.pwdFun
             this.modifyTo.TabIndex = 1;
             this.modifyTo.Text = "修改";
             this.modifyTo.UseVisualStyleBackColor = false;
+
             this.modifyTo.Click += new System.EventHandler(this.modifyTo_Click);
             // 
             // jpwd

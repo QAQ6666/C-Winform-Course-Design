@@ -210,8 +210,9 @@ namespace WindowsFormsApp1.sqlOperating
         /* 更新密码 */
         public static int updatePwd(string npwd)
         {
+            //Console.WriteLine(UserSession.getName());
             npwd = EncodHelper.DESEnCode(npwd, "78945612");
-            string str_update = "update administrator set pwd= '" + npwd + "' where admin=" + UserSession.getName();
+            string str_update = "update administrator set pwd= '" + npwd + "' where admin= '" + UserSession.getName()+"'";
             try
             {
                 conn.Open();
@@ -262,13 +263,13 @@ namespace WindowsFormsApp1.sqlOperating
         /// <param name="admin">用户名</param>
         /// <param name="pwd">密码</param>
         /// <returns></returns>
-        public static void  register(string admin, string pwd)
+        public static void  register(string admin, string pwd,string y)
         {
             try
             {
                 conn.Open();
                 pwd = EncodHelper.DESEnCode(pwd, "78945612");
-                string sql = "insert into administrator(admin,pwd) values ('" + admin + "','" + pwd + "')";
+                string sql = "insert into administrator(admin,pwd,isroot) values ('" + admin + "','" + pwd + "','"+ y+"')";
                 Console.WriteLine(sql);
                 command = new MySqlCommand(sql, conn);
                 command.ExecuteNonQuery();
@@ -301,11 +302,11 @@ namespace WindowsFormsApp1.sqlOperating
         //DataGridView 更新数据
         public static void updateList(List<string> nameary , List<DataGridViewRow> rlist,string tablename)
         {
-            conn.Open();
+            
 
             deletData(nameary,tablename);
             int c = rlist[0].Cells.Count;
-
+            conn.Open();
             foreach (DataGridViewRow dgv  in rlist)
             {
                 string sql = "insert into " + tablename + " values (";
@@ -394,7 +395,7 @@ namespace WindowsFormsApp1.sqlOperating
             return true;
         }
         //插入数据
-        public static void datagridAdd(List<DataGridViewRow> rlist, string tablename)
+        public static int datagridAdd(List<DataGridViewRow> rlist, string tablename)
         {
             conn.Open();
             foreach (DataGridViewRow dgv in rlist)
@@ -419,14 +420,17 @@ namespace WindowsFormsApp1.sqlOperating
                     {
                         command.ExecuteNonQuery();
                         MesShow.ms("添加数据成功");
+                        return 1;
                     }
                     catch (Exception ex)
                     {
                         MesShow.errorMs(ex.Message);
+                        return 0;
                     }
                 }
             }
             conn.Close();
+            return 0;
         }
         public static void closeSql()
         {

@@ -53,6 +53,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     int rows = DbSQLHelper.rowQuery(userin, pwdin);
+                    //int rows = 11;
                     if (rows == 11 || rows == 10)
                     {
                         string str = rows == 11 ? "ROOT" : "N";

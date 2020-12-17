@@ -199,7 +199,11 @@ namespace WindowsFormsApp1.mainview
                 }
                 if (noAdd)
                 {
-                    DbSQLHelper.datagridAdd(addRowlist, ListCreate.tableName);
+                   int result =  DbSQLHelper.datagridAdd(addRowlist, ListCreate.tableName);
+                   if (result == 1)
+                    {
+                        this.Close();
+                    }
                 }
             }
         }
@@ -291,6 +295,10 @@ namespace WindowsFormsApp1.mainview
                     SystemManagementView.thsinglist = new Thread(delegate () { singlelist.ShowDialog(); });
                     SystemManagementView.thsinglist.IsBackground = true;
                     SystemManagementView.thsinglist.Start();
+                }
+                else
+                {
+                    MesShow.ms("该表数据无详细信息");
                 }
             }
            

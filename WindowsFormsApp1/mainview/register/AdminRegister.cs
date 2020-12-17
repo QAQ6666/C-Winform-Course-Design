@@ -20,6 +20,14 @@ namespace WindowsFormsApp1.mainview.register
         public AdminRegister()
         {
             InitializeComponent();
+            if (UserSession.getRoot().Equals("ROOT"))
+            {
+                checkBox1.Enabled = true;
+            }
+            else
+            {
+                checkBox1.Enabled = false;
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -29,7 +37,7 @@ namespace WindowsFormsApp1.mainview.register
         private void Form1_Load(object sender, EventArgs e)
         {
             //pictureBox1.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + HexStringToString(result, System.Text.Encoding.UTF8));
-            Console.WriteLine(StringToHexString(@"..\..\Resources\t01eae069596685b82f.webp.jpg", System.Text.Encoding.UTF8));
+            //Console.WriteLine(StringToHexString(@"..\..\Resources\t01eae069596685b82f.webp.jpg", System.Text.Encoding.UTF8));
             ImgSetRound();
         }
         //头像框设置成圆形
@@ -208,7 +216,7 @@ namespace WindowsFormsApp1.mainview.register
             {
                 variable.textboxHasText5 = true;
 
-                if (textBox5.Text != textBox4.Text && variable.textboxHasText5 == true)
+                if (textBox5.Text != textBox4.Text)
                 {
                     this.label6.Visible = true;
                     variable.state = false;
@@ -231,8 +239,27 @@ namespace WindowsFormsApp1.mainview.register
                 MessageBox.Show("请正确填写信息");
             else
             {
-                DbSQLHelper.register (textBox1.Text,textBox5.Text);
-                Close();
+                if ( !textBox1.Text.ToString().Equals("") && !textBox5.Text.ToString().Equals("") && !textBox4.Text.ToString().Equals(""))
+                {
+
+                    string y = "";
+                    if (checkBox1.Checked)
+                    {
+                        y = "n";
+                    }
+                    else
+                    {
+                        y = "y";
+                    }
+                    
+                    DbSQLHelper.register(textBox1.Text, textBox5.Text, y);
+                    textBox1.Text = "";
+                    textBox5.Text = "";
+                    textBox4.Text = "";
+                    //Close();
+                }
+
+
             }
         }
 
